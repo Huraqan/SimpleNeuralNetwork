@@ -2,6 +2,10 @@
 
 This project is a showcase on how to build and train a simple neural network on images of handwritten digits. It is coded in Python 3.12 using basic libraries like Numpy and Pandas.
 
+This was inspired by 3blue1brown's series on the subject: find it [here](https://youtu.be/aircAruvnKk?si=2ADANgQrMpzmQACh).
+
+In turn his series is based on a project and book by [Michael Nielsen](https://github.com/mnielsen/neural-networks-and-deep-learning/). I used the data_loader from his project and download the dataset from his repo. I encourage you to go through his repo since he has more than one network architecture.
+
 # Usage
 
 Explore the concept of neural networks by getting your hands dirty.
