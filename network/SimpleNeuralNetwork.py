@@ -186,7 +186,7 @@ class SimpleNeuralNetwork:
         return out, cost_float, win_fail
     
     
-    def validate(self, validation_data, csv_path=""):
+    def validate(self, validation_data, csv_path="", return_df=False):
         results = [[], [], []]
         for i, validation_example in enumerate(validation_data):
             input, expected_output = validation_example
@@ -201,13 +201,14 @@ class SimpleNeuralNetwork:
         
         print(f"{len(validation_data)} samples, final score:", ratio_string(results[2]), "                    ")
         
-        # Save to CSV
-        if not csv_path:
-            return
-        
         df = pd.concat([pd.Series(results[0]), pd.Series(results[1]), pd.Series(results[2])], axis=1)
         df.columns = ["Digit", "Cost", "Win or Fail"]
-        df.to_csv("reports/" + csv_path, index=False)
+        
+        # Save to CSV
+        if csv_path:
+            return df.to_csv("reports/" + csv_path, index=False)
+        elif return_df:
+            return df
     
     
     def save_to_file(self, fp="neural_network.pickle"):

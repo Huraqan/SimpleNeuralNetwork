@@ -1,6 +1,8 @@
 import numpy as np
 from numpy import ndarray
 from random import gauss
+from numpy.random import rand
+from math import sqrt
 
 class Layer:
     def __init__(self, index, sizes) -> None:

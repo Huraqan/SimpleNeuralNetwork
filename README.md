@@ -21,7 +21,7 @@ Tinker with settings to get improved results. Expand upon the project by impleme
 # Installation
 
 - Use `pip install -r requirements.txt` to get necessary libs.
-- Unzip `mnist.zip`, `mnist.pkl` is the pickled dataset.
+- Unzip `mnist.zip` inside the data folder, `mnist.pkl` is the pickled dataset.
 
 # Getting started
 
