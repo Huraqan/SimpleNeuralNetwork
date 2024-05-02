@@ -4,8 +4,8 @@ from random import seed
 import numpy as np
 import pandas as pd
 
-from Layer import Layer
-from data_handler import split_batches, get_digit
+from network.Layer import Layer
+from data.data_handler import split_batches, get_digit
 from itertools import chain
 
 line_ending = "============================================================================"
@@ -70,6 +70,7 @@ class SimpleNeuralNetwork:
             
             win_fails.append(win_fail)
         
+        ########################### LEARNING ###########################
         # Apply gradients to all weights and biases to train the network
         
         learning_rate = 1.0 / len(batch)
@@ -88,7 +89,7 @@ class SimpleNeuralNetwork:
         delta_nabla_w = [np.zeros(w.shape) for w in self.weights]
         delta_nabla_b = [np.zeros(b.shape) for b in self.biases]
         
-        ########################### Feedforward ###########################
+        ########################### FEEDFORWARD ###########################
         # This is different to a simple prediction feedforward.
         # Here we must keep track of what our activations were before
         # the sigmoid transformation (or any other activation function).
@@ -108,7 +109,7 @@ class SimpleNeuralNetwork:
         delta_nabla_w[-1] += np.dot(error, self.layers[-2].activations.transpose())
         delta_nabla_b[-1] += error
         
-        ########################### Backpropagation ###########################
+        ########################### BACKPROPAGATION ###########################
         # Previous values for error are reused at each layer, going backwards
         # Direction naming:
         # [input layer] ... prev <- current -> next ... [output layer]
@@ -168,7 +169,6 @@ class SimpleNeuralNetwork:
     
     
     def calculate_scores(self, output, expected_output, verbose=False):
-        output = self.layers[-1].activations
         error, win_fail = self.compute_error(output, expected_output)
         
         expected = pd.Series(expected_output.flatten())
@@ -236,7 +236,6 @@ def softmax(logits):
     exp_logits = np.exp(logits - np.max(logits))  # Improve numerical stability
     probabilities = exp_logits / np.sum(exp_logits)
     return np.round(probabilities, 3)
-
 
 def ratio_string(win_fails:list, length=50):
     df = pd.DataFrame(win_fails).value_counts()

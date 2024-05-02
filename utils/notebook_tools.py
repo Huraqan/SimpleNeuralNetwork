@@ -40,6 +40,7 @@ def plot_win_fails(df):
     ndf["Digit"] = pd.Categorical(ndf["Digit"], ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "noise"])
 
     sns.histplot(data=ndf, x="Digit", hue="Win or Fail", multiple="stack")
+    plt.show()
     
     
     

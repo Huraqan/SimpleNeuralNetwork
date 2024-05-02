@@ -2,6 +2,9 @@
 mnist_loader
 ~~~~~~~~~~~~
 
+PARTS OF THIS FILE ORIGINATE FROM MICHAEL NIELSEN'S PROJECT FOUND HERE:
+https://github.com/mnielsen/neural-networks-and-deep-learning/blob/master/src/mnist_loader.py
+
 A library to load the MNIST image data.  For details of the data
 structures that are returned, see the doc strings for ``load_data``
 and ``load_data_wrapper``.  In practice, ``load_data_wrapper`` is the
@@ -43,14 +46,18 @@ def load_data() -> tuple:
     That's done in the wrapper function ``load_data_wrapper()``, see
     below."""
     
-    with open("mnist.pkl", "rb") as f:
+    with open("data/mnist.pkl", "rb") as f:
         training_data, validation_data, test_data = pickle.load(f, encoding="latin")
 
     return (training_data, validation_data, test_data)
 
 
 def load_noise() -> tuple:
-    with open("uniform_noise.pickle", "rb") as f:
+    """Load the uniform noise samples and split into groups of sizes equal
+    to those of original datatset. 5000 training samples, 1000 validation
+    samples and 1000 test samples as is the case for each digit."""
+    
+    with open("data/uniform_noise.pickle", "rb") as f:
         noise = pickle.load(f, encoding="latin")
 
     noise_training = noise[:5000]

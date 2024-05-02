@@ -1,5 +1,5 @@
-from data_handler import load_data_wrapper
-from SimpleNeuralNetwork import SimpleNeuralNetwork
+from data.data_handler import load_data_wrapper
+from network.SimpleNeuralNetwork import SimpleNeuralNetwork
 
 if not __name__ == "__main__":
     exit()

@@ -14,7 +14,8 @@ Tinker with settings to get improved results. Expand upon the project by impleme
 
 # Installation
 
-Use `pip install -r requirements.txt` to get necessary libs.
+- Use `pip install -r requirements.txt` to get necessary libs.
+- Unzip `mnist.zip`, `mnist.pkl` is the pickled dataset.
 
 # Getting started
 
@@ -26,8 +27,8 @@ The network itself is composed of two files:
 - SimpleNeuralNetwork.py
 - Layer.py
 
-This network has been set up to accomodate two output shapes: (10, 1) and (11, 1). The first ten elements correspond to each digit. The eleventh element represents the "noise" category/target.
+This project has been set up to accomodate two output shapes: (10, 1) and (11, 1). The first ten elements correspond to each digit. The eleventh element represents the "noise" category/target.
 
-I have noticed training the model to recognize noise will improve training speed, but also generel accuracy. At least for the first epochs. More epochs seem to bring results of noise and noiseless models much closer together.
+I have noticed training the model to recognize noise will ever so slightly improve training speed, but also generel accuracy. At least for the first epochs. More epochs seem to bring results of these models much closer together.
 
 However, I do find it fascinating that the model is in fact better at recognizing random noise than it is at distinguishing digits.
