@@ -10,7 +10,7 @@ This project is a showcase on how to build and train a simple neural network on 
 
 This was inspired by 3blue1brown's series on the subject: find it [here](https://youtu.be/aircAruvnKk?si=2ADANgQrMpzmQACh).
 
-In turn his series is based on a project and book by [Michael Nielsen](https://github.com/mnielsen/neural-networks-and-deep-learning/). I used the data_loader from his project and download the dataset from his repo. I encourage you to go through his repo since he has more than one network architecture.
+In turn his series is based on a project and book by [Michael Nielsen](https://github.com/mnielsen/neural-networks-and-deep-learning/). I used the data_loader.py file from his project and downloaded the dataset from his repo. I encourage you to go through his repo since he has more than one network architecture.
 
 # Usage
 
