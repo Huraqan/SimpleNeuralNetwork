@@ -33,4 +33,4 @@ The network itself is composed of two files:
 
 This project has been set up to accomodate two output shapes: (10, 1) and (11, 1). The first ten elements correspond to each digit. The eleventh element represents the "noise" category.
 
-I noticed that training the model to recognize noise will slightly degrade performance on the digits. However, I did find it fascinating that the model is in fact better at recognizing random noise than it is at distinguishing digits. But recent discussions about the noise category have brought me to believe that the network is likely using the outer pixels to distinuish noise from the MNIST data. Probably because the digits only have black pixels at the edges.
+I noticed that training the model to recognize noise will slightly degrade performance on the digits. However, I did find it fascinating that the model is in fact better at recognizing random noise than it is at distinguishing digits. But recent discussions about the noise category have brought me to believe that the network is likely using the outer pixels to distinguish noise from the MNIST data. Probably because the digits only have black pixels at the edges.
