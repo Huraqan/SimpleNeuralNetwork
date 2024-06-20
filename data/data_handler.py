@@ -13,7 +13,8 @@ function usually called by our neural network code.
 
 #### Libraries
 # Standard library
-# import gzip
+import os
+import gzip
 import pickle
 from random import shuffle, uniform
 
@@ -22,6 +23,14 @@ import matplotlib.pyplot as plt
 import numpy as np
 from numpy import ndarray
 
+def unzip_data():
+    if os.path.isfile("data/mnist.pkl"):
+        print("File already unzipped.")
+        return
+    
+    with open("data/mnist.pkl", "wb") as new_file:
+        with gzip.open('data/mnist.pkl.gz', 'rb') as unzipped_file:
+            new_file.write(unzipped_file.read())
 
 def load_data() -> tuple:
     """Return the MNIST data as a tuple containing the training data,

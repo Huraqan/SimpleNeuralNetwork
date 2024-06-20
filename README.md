@@ -8,9 +8,7 @@
 
 This project is a showcase on how to build and train a simple neural network on images of handwritten digits. It is coded in Python 3.12 using basic libraries like Numpy and Pandas.
 
-This was inspired by 3blue1brown's series on the subject: find it [here](https://youtu.be/aircAruvnKk?si=2ADANgQrMpzmQACh).
-
-In turn his series is based on a project and book by [Michael Nielsen](https://github.com/mnielsen/neural-networks-and-deep-learning/). I used the data_loader.py file from his project and downloaded the dataset from his repo. I encourage you to go through his repo since he has more than one network architecture.
+This was inspired by 3blue1brown's series on the subject: find it [here](https://youtu.be/aircAruvnKk?si=2ADANgQrMpzmQACh). In turn his series is based on a project and book by [Michael Nielsen](https://github.com/mnielsen/neural-networks-and-deep-learning/). I used the data_loader.py file from his project and downloaded the dataset from his repo. I encourage you to go through his repo since he has more than one network architecture.
 
 # Usage
 
@@ -21,7 +19,7 @@ Tinker with settings to get improved results. Expand upon the project by impleme
 # Installation
 
 - Use `pip install -r requirements.txt` to get necessary libs.
-- Unzip `mnist.zip` inside the data folder, `mnist.pkl` is the pickled dataset.
+- Unzip `mnist.gz` by running the first two cells of the setup notebook, the resulting `mnist.pkl` is the pickled dataset.
 
 # Getting started
 
@@ -35,4 +33,4 @@ The network itself is composed of two files:
 
 This project has been set up to accomodate two output shapes: (10, 1) and (11, 1). The first ten elements correspond to each digit. The eleventh element represents the "noise" category.
 
-I have noticed training the model to recognize noise will slightly degrade performance on the digits.However, I do find it fascinating that the model is in fact better at recognizing random noise than it is at distinguishing digits.
+I noticed that training the model to recognize noise will slightly degrade performance on the digits. However, I did find it fascinating that the model is in fact better at recognizing random noise than it is at distinguishing digits. But recent discussions about the noise category have brought me to believe that the network is likely using the outer pixels to distinuish noise from the MNIST data. Probably because the digits only have black pixels at the edges.
