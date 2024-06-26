@@ -12,9 +12,7 @@ This was inspired by 3blue1brown's series on the subject: find it [here](https:/
 
 # Usage
 
-Explore the concept of neural networks by getting your hands dirty.
-See the code and maths for the feed-forward and back-propagation.
-Tinker with settings to get improved results. Expand upon the project by implementing convolution, a fantansic way to get more valuable information encoded into each pixel, allowing for the network to better differentiate certain patterns.
+Explore the concept of neural networks by getting your hands dirty. See the code and maths for the feed-forward and back-propagation algorithms. Tinker with settings to get improved results. Expand upon the project by implementing convolution, a fantastic way to get valuable information about a pixel's neighborhood, allowing for the network to better differentiate certain patterns.
 
 # Installation
 
