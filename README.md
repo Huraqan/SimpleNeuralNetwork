@@ -10,6 +10,8 @@ This project is a showcase on how to build and train a simple neural network on 
 
 This was inspired by 3blue1brown's series on the subject: find it [here](https://youtu.be/aircAruvnKk?si=2ADANgQrMpzmQACh). In turn his series is based on a project and book by [Michael Nielsen](https://github.com/mnielsen/neural-networks-and-deep-learning/). I used the data_loader.py file from his project and downloaded the dataset from his repo. I encourage you to go through his repo since he has more than one network architecture.
 
+Presentation PDF file in `assets\presentation.pdf` or click [here](https://github.com/Huraqan/SimpleNeuralNetwork/blob/main/assets/presentation.pdf)
+
 # Usage
 
 Explore the concept of neural networks by getting your hands dirty. See the code and maths for the feed-forward and back-propagation algorithms. Tinker with settings to get improved results. Expand upon the project by implementing convolution, a fantastic way to get valuable information about a pixel's neighborhood, allowing for the network to better differentiate certain patterns.
